@@ -33,6 +33,12 @@ module RGL
   module GraphIterator
     include Stream
     include GraphWrapper
+
+    def length
+      inject(0) { |sum, _| sum + 1 }
+    end
+
+    alias size length
   end
 
   # Module GraphVisitor defines the BGL

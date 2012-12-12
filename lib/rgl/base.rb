@@ -4,8 +4,6 @@
 # library. The main module is RGL::Graph which defines the abstract behavior of
 # all graphs in the library.
 
-require 'rgl/enumerable_ext'
-
 RGL_VERSION = "0.4.1"
 
 module RGL
@@ -229,11 +227,11 @@ module RGL
 
     # Returns the number of vertices.
     #
-    def size # Why not in Enumerable?
-      inject(0) { |n, v| n + 1 }
+    def num_vertices
+      inject(0) { |n, _| n + 1 }
     end
 
-    alias :num_vertices :size
+    alias size num_vertices
 
     # Returns the number of edges.
     #
