@@ -62,6 +62,7 @@ module RGL
     def relax_edges(target = nil, break_on_target = false)
       until @queue.empty?
         u = @queue.pop
+        puts "poped #{u}"
 
         break if break_on_target && u == target
 
@@ -113,6 +114,7 @@ module RGL
 
       def push(vertex, distance)
         @heap.push(vertex_key(vertex, distance), vertex)
+        puts "push #{vertex}"
       end
 
       def decrease_key(vertex, old_distance, new_distance)
