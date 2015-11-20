@@ -5,3 +5,4 @@ gemspec
 gem 'rake'
 gem 'yard'
 gem 'asciidoctor'
+gem 'pry'
